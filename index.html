@@ -27,45 +27,65 @@
         .headtext{
             font-family: 'Berkshire Swash';
         }
+        .top-messi{
+            height: 300px;
+            width: 280px;
+            
+        }
+        .left-messi{
+            height: 300px;
+            width: 280px;
+            
+        }
+        footer{
+            border-top:2px solid whitesmoke;
+        }
       </style>
 </head>
 <body>
-    <header class="w-100 h-96 bg-slate-900 flex flex-col items-center justify-center ">
+    <header class="w-100 h-96 bg-slate-900 flex flex-col items-center justify-center relative">
+        <img class="top-messi absolute top-30 right-20 " src="img/top-messi.png" alt="">
         <h1 class="headtext text-headertext text-5xl"> Select best five football players</h1>
         <p class="text-center mt-5 text-white">according to some people Messi is playing well, 
             some people <br> think Ronaldo is good, some people think Robert is playing well. <br>Check out the Top 5 Football Players in the World Now.</p>
+            <img class="left-messi absolute left-0 bottom-0" src="img/left-messi.png" alt="">
     </header>
     <main class="bg-main overflow-hidden">
         <section class="w-4/5 mx-auto grid grid-cols-4 gap-4  mt-20 mb-20">
+
             <div class="border border-slate-500 bg-black flex flex-col gap-3 items-center justify-center">
                 <img src="img/messi.png" alt="messi image">
-                <h1 class="text-white text-3xl">Lionel Messi</h1>
+                <h1 id="player-messi" class="text-white text-3xl">Lionel Messi</h1>
                 <p class="text-slate-300 text-xl flex gap-3">
                     <span>36 Goals</span>
                     <span>|</span>
                     <span>120 Assist</span>
                 </p>
-                <button class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
+                <button id="messi-btn" class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
             </div>
+
+
             <div class="border border-slate-500 bg-black flex flex-col gap-3 items-center justify-center">
                 <img src="img/ronaldo.png" alt="messi image">
-                <h1 class="text-white text-3xl">Ronaldo</h1>
+                <h1 id="player-ronaldo" class="text-white text-3xl">Ronaldo</h1>
                 <p class="text-slate-300 text-xl flex gap-3">
                     <span>36 Goals</span>
                     <span>|</span>
                     <span>120 Assist</span>
                 </p>
-                <button class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
+                <button id="ronaldo-btn" class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
             </div>
+
+
             <div class="border border-slate-500 bg-black flex flex-col gap-3 items-center justify-center">
                 <img src="img/neymar.png" alt="messi image">
-                <h1 class="text-white text-3xl">Neymar</h1>
+                <h1 id="player-neymar" class="text-white text-3xl">Neymar</h1>
                 <p class="text-slate-300 text-xl flex gap-3">
                     <span>36 Goals</span>
                     <span>|</span>
                     <span>120 Assist</span>
                 </p>
-                <button class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
+                <button id="neymar-btn" class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
             </div>
 
 
@@ -74,12 +94,11 @@
                                 <!------------------------------ list section added----------------------------- -->
 
             <div class="border border-slate-500  ">
-                <h1 class="text-white text-2xl text-center mt-8">Selected-5</h1>
+                <h1 class="text-white text-2xl text-center mt-8 mb-3">Selected-5</h1>
                 <hr class="w-3/4 mx-auto">
                 <div class="px-10 mt-8">
-                    <ol class="text-white text-lg list-decimal list-inside">
-                        <li class="mb-2">M saleh</li>
-                        <li>Neymar</li>
+                    <ol id="list" class="text-white text-lg list-decimal list-inside">
+                        
                     </ol>
                 </div>
             </div>
@@ -89,33 +108,37 @@
 
             <div class="border border-slate-500 bg-black flex flex-col gap-3 items-center justify-center">
                 <img src="img/m-salah.png" alt="messi image">
-                <h1 class="text-white text-3xl">M salah</h1>
+                <h1 id="player-salah" class="text-white text-3xl">M salah</h1>
                 <p class="text-slate-300 text-xl flex gap-3">
                     <span>36 Goals</span>
                     <span>|</span>
                     <span>120 Assist</span>
                 </p>
-                <button class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
+                <button id="salah-btn" class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
             </div>
+
+
             <div class="border border-slate-500 bg-black flex flex-col gap-3 items-center justify-center">
                 <img src="img/r-carlos.png" alt="messi image">
-                <h1 class="text-white text-3xl">R Carlos</h1>
+                <h1 id="player-carlos" class="text-white text-3xl">R Carlos</h1>
                 <p class="text-slate-300 text-xl flex gap-3">
                     <span>36 Goals</span>
                     <span>|</span>
                     <span>120 Assist</span>
                 </p>
-                <button class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
+                <button id="carlos-btn" class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
             </div>
+
+
             <div class="border border-slate-500 bg-black flex flex-col gap-3 items-center justify-center">
                 <img src="img/luis-suarez.png" alt="messi image">
-                <h1 class="text-white text-3xl">Luis suarez</h1>
+                <h1 id="player-suarez" class="text-white text-3xl">Luis suarez</h1>
                 <p class="text-slate-300 text-xl flex gap-3">
                     <span>36 Goals</span>
                     <span>|</span>
                     <span>120 Assist</span>
                 </p>
-                <button class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
+                <button id="suarez-btn" class="bg-blue-700 w-4/5 text-white py-2 text-xl mb-4">Select</button>
             </div>
 
 
@@ -125,7 +148,7 @@
 
             <div class="border border-slate-500 ">
                 <h1 class="text-center text-white mt-2 mb-2 text-2xl">Budget</h1>
-                <hr class="w-3/4 mx-auto">
+                <hr class="w-3/4 mx-auto mb-2">
                 <div class="w-11/12 mx-auto flex flex-col gap-2 flex flex-col items-center justify-center">
                     <div class="flex items-center justify-between">
                         <p class="inline text-white">Per Player</p>
@@ -147,7 +170,7 @@
                     <button class="bg-blue-700 w-full text-white py-2 text-xl mb-4">Calculate Total</button>
                     <p class="w-full text-white flex items-center justify-between">
                         <span>Player Expences</span>
-                        <span>$<span>5000</span></span>
+                        <span class="text-red-500">$<span>5000</span></span>
                     </p>
                 </div>
             </div>
@@ -155,32 +178,20 @@
 
         </section>
     </main>
+    <footer class="h-28 bg-main flex items-center justify-center">
+        <p class="text-white">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
 
 
-    <ul class="list-decimal">
-        <li>arif</li>
-        <li>tajul</li>
-    </ul>
     <script src="js/common.js"></script>
     <script src="js/function.js"></script>
 </body>
 </html>
-/* <!-- <svg width="205" height="28" viewBox="0 0 205 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M187.368 0.729511C183.829 0.131589 176.708 0.0345343 156.386 0.308329C141.753 0.505356 135.415 0.781844 120.831 1.85914C99.1201 3.46313 87.6779 4.99624 63.3901 9.55575C58.4802 10.4775 50.787 11.8056 46.2939 12.5072C27.3256 15.4693 5.58383 21.0984 4.91499 23.2209C4.82435 23.509 4.86306 23.7821 5.00118 23.8276C5.1393 23.873 6.95288 23.3167 9.03154 22.5917C12.5633 21.3595 15.583 20.5134 15.5016 20.7785C15.4821 20.8421 14.4752 21.2143 13.2637 21.6057C12.0525 21.9969 9.21238 22.9883 6.95277 23.8084C4.69307 24.6288 2.26332 25.4478 1.55283 25.6289C0.244172 25.9623 -0.365644 26.6894 0.440891 26.9546C1.24858 27.2202 4.76286 26.4495 9.67213 24.9297C15.0751 23.2576 34.7179 18.2387 41.8284 16.7137C49.1761 15.1378 56.7882 13.8466 61.7428 13.3357C89.2139 10.5032 100.561 9.90698 119.525 10.2993C145.857 10.8439 161.01 11.9846 180.794 14.9117C189.292 16.1689 197.071 17.5899 199.09 18.2539C200.151 18.603 200.656 18.5975 201.277 18.2295C202.414 17.5552 203.655 15.9316 204.072 14.5729C204.372 13.5958 204.317 13.302 203.717 12.6788C202.28 11.1861 201.5 11.0716 178.246 8.94024C159.228 7.19733 146.666 6.54808 129.441 6.41785C126.325 6.3941 123.671 6.33279 123.544 6.28131C123.145 6.1195 135.278 5.62321 141.445 5.54873C149.018 5.45726 166.379 5.93053 174.204 6.44183C179.98 6.81899 180.435 6.89586 183.109 7.94186C185.81 8.99817 185.962 9.02305 186.746 8.53162C187.918 7.79677 189.746 5.39372 190.161 4.04379C190.481 3.00094 190.423 2.79412 189.559 1.90708C189.033 1.36704 188.495 0.909743 188.363 0.891101C188.231 0.872367 187.783 0.799865 187.368 0.729511Z" fill="white"/>
-    </svg>
+
 
 
 
 
     
     
-    /* Line Marker */
 
-position: absolute;
-left: 64.13%;
-right: 22.57%;
-top: 7.37%;
-bottom: 89.12%;
-
-background: #FFFFFF;
-transform: matrix(0.96, 0.31, -0.29, 0.95, 0, 0); --> */
