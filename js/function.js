@@ -1,7 +1,7 @@
 
+const listName = document.getElementById('list');
 
 document.getElementById('messi-btn').addEventListener('click', function(){
-    const listName = document.getElementById('list');
     if(listName.childElementCount < '5'){
         const btnValue = getButtonActionById('messi-btn');
         const player = getPlayerValueById('player-messi');
@@ -13,7 +13,6 @@ document.getElementById('messi-btn').addEventListener('click', function(){
 });
 
 document.getElementById('ronaldo-btn').addEventListener('click', function(){
-    const listName = document.getElementById('list');
     if(listName.childElementCount < '5'){
         const btnValue = getButtonActionById('ronaldo-btn');
         const player = getPlayerValueById('player-ronaldo');
@@ -25,7 +24,6 @@ document.getElementById('ronaldo-btn').addEventListener('click', function(){
 });
 
 document.getElementById('neymar-btn').addEventListener('click', function(){
-    const listName = document.getElementById('list');
     if(listName.childElementCount < '5'){
         const btnValue = getButtonActionById('neymar-btn');
         const player = getPlayerValueById('player-neymar');
@@ -37,7 +35,6 @@ document.getElementById('neymar-btn').addEventListener('click', function(){
 });
 
 document.getElementById('salah-btn').addEventListener('click', function(){
-    const listName = document.getElementById('list');
     if(listName.childElementCount < '5'){
         const btnValue = getButtonActionById('salah-btn');
         const player = getPlayerValueById('player-salah');
@@ -49,7 +46,6 @@ document.getElementById('salah-btn').addEventListener('click', function(){
 });
 
 document.getElementById('carlos-btn').addEventListener('click', function(){
-    const listName = document.getElementById('list');
     if(listName.childElementCount < '5'){
         const btnValue = getButtonActionById('carlos-btn');
         const player = getPlayerValueById('player-carlos');
@@ -61,7 +57,6 @@ document.getElementById('carlos-btn').addEventListener('click', function(){
 });
 
 document.getElementById('suarez-btn').addEventListener('click', function(){
-    const listName = document.getElementById('list');
     if(listName.childElementCount < '5'){
         const btnValue = getButtonActionById('suarez-btn');
         const player = getPlayerValueById('player-suarez');
@@ -70,10 +65,27 @@ document.getElementById('suarez-btn').addEventListener('click', function(){
     else{
         alert('Maximum limit exceed');
     }
-    
 });
 
 
+document.getElementById('calculate-btn').addEventListener('click', function(){
+    const inputNumber = getInputValueById('per-player-cost');
+    const playerNumberString = listName.childElementCount;
+    const playerNumber = parseFloat(playerNumberString);
+    const prevPlayerCost = document.getElementById('total-p-cost');
+    const playerCost = playerNumber * inputNumber;
+    prevPlayerCost.innerText = playerCost;
+    return prevPlayerCost;
+});
+
+document.getElementById('calculate-total-btn').addEventListener('click', function(){
+    const managerCost = getInputValueById('manager-input-field');
+    const coachCost = getInputValueById('coach-input-field');
+    const totalCost = managerCost + coachCost + prevPlayerCost;
+console.log(totalCost);
+    const prevCost = document.getElementById('total-cost');
+    prevCost.innerText = totalCost;
+})
 
 
 

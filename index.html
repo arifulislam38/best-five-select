@@ -152,25 +152,25 @@
                 <div class="w-11/12 mx-auto flex flex-col gap-2 flex flex-col items-center justify-center">
                     <div class="flex items-center justify-between">
                         <p class="inline text-white">Per Player</p>
-                        <input class="w-2/4 border border border-slate-500 bg-transparent" type="text">
+                        <input id="per-player-cost" class="w-2/4 border border border-slate-500 bg-transparent text-white" type="text">
                     </div>
-                    <button class="bg-blue-700 w-full text-white py-2 text-xl mb-4">Calculate</button>
+                    <button id="calculate-btn" class="bg-blue-700 w-full text-white py-2 text-xl mb-4">Calculate</button>
                     <p class="w-full text-white flex items-center justify-between">
                         <span>Player Expences</span>
-                        <span>$<span>5000</span></span>
+                        <span>$<span id="total-p-cost">5000</span></span>
                     </p>
                     <div class="flex items-center justify-between">
-                        <p class="inline text-white">Per Player</p>
-                        <input class="w-2/4 border border border-slate-500 bg-transparent" type="text">
+                        <p class="inline text-white">Manager</p>
+                        <input id="manager-input-field" class="w-2/4 border border border-slate-500 bg-transparent text-white" type="text">
                     </div>
                     <div class="flex items-center justify-between">
-                        <p class="inline text-white">Per Player</p>
-                        <input class="w-2/4 border border border-slate-500 bg-transparent" type="text">
+                        <p class="inline text-white">Coach</p>
+                        <input id="coach-input-field" class="w-2/4 border border border-slate-500 bg-transparent text-white" type="text">
                     </div>
-                    <button class="bg-blue-700 w-full text-white py-2 text-xl mb-4">Calculate Total</button>
+                    <button id="calculate-total-btn" class="bg-blue-700 w-full text-white py-2 text-xl mb-4">Calculate Total</button>
                     <p class="w-full text-white flex items-center justify-between">
-                        <span>Player Expences</span>
-                        <span class="text-red-500">$<span>5000</span></span>
+                        <span>Total</span>
+                        <span class="text-red-500">$<span id="total-cost">10000</span></span>
                     </p>
                 </div>
             </div>
