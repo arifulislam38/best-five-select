@@ -1,4 +1,4 @@
-
+// button action function start
 const listName = document.getElementById('list');
 
 document.getElementById('messi-btn').addEventListener('click', function(){
@@ -66,29 +66,40 @@ document.getElementById('suarez-btn').addEventListener('click', function(){
         alert('Maximum limit exceed');
     }
 });
+// button action function end
 
 
+// calculation function start
 document.getElementById('calculate-btn').addEventListener('click', function(){
     const inputNumber = getInputValueById('per-player-cost');
-    const playerNumberString = listName.childElementCount;
-    const playerNumber = parseFloat(playerNumberString);
-    const prevPlayerCost = document.getElementById('total-p-cost');
-    const playerCost = playerNumber * inputNumber;
-    prevPlayerCost.innerText = playerCost;
-    return prevPlayerCost;
+    if(isNaN(inputNumber)){
+        alert('plz give a valid number to the player cost field');
+    }
+    else{
+        const playerNumberString = listName.childElementCount;
+        const playerNumber = parseFloat(playerNumberString);
+        const prevPlayerCost = document.getElementById('total-p-cost');
+        const playerCost = playerNumber * inputNumber;
+        prevPlayerCost.innerText = playerCost;
+        return prevPlayerCost;
+    }
 });
 
 document.getElementById('calculate-total-btn').addEventListener('click', function(){
     const managerCost = getInputValueById('manager-input-field');
     const coachCost = getInputValueById('coach-input-field');
+    const prevPlayerCost = stringTonumber('total-p-cost');
     const totalCost = managerCost + coachCost + prevPlayerCost;
-console.log(totalCost);
     const prevCost = document.getElementById('total-cost');
-    prevCost.innerText = totalCost;
-})
-
-
-
+    if(isNaN(managerCost) || isNaN(coachCost)){
+        alert('Put the number value to the Manager cost & coach cost');
+    }
+    else{
+        prevCost.innerText = totalCost;
+    }
+    
+});
+//calculation function end
 
 
 
